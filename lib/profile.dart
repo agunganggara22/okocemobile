@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'lihat_profile.dart';
 import 'welcome_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -89,6 +90,32 @@ class ProfileScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                 ListTile(
+  leading: Icon(Icons.person),
+  title: Text('Lihat Profile'),
+  trailing: Icon(Icons.arrow_forward),
+  onTap: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => LihatProfileScreen(
+          nama: 'Rico Hadeta Saputra',
+          email: 'ricohadetasaputra@gmail.com',
+          noHp: '0812-3456-7890',
+          alamat: 'Jl. Tebet Barat Dalam VII No.3, RT.9/RW.6, Tebet Barar., Kecamatan. Tebet, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12810',
+          fotoProfil: 'assets/images/logo_ok_oce.png',
+          jenisKelamin: 'Laki-laki',
+          tempatLahir: 'Jakarta',
+          tanggalLahir: '1 Januari 2003',
+          agama: 'Islam',
+          statusPernikahan: 'Belum Menikah',
+          pendidikanTerakhir: 'SMA/SMK',
+          pekerjaan: 'Pelajar/Mahasiswa',
+        ),
+      ),
+                    );
+                  },
+                ),
                 ListTile(
                   leading: Icon(Icons.logout),
                   title: Text('Logout'),
